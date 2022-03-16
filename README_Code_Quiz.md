@@ -29,7 +29,8 @@ The first step I took was to start pseudo-coding. I wanted to get my thought pro
 
 ### index.html
 
-
+1. I added a div to hold the quiz.
+2. I added a button to submit the form.
 
 
 ### style.css
@@ -39,7 +40,7 @@ The first step I took was to start pseudo-coding. I wanted to get my thought pro
 
 ### script.js
 
-
+1. I added an object to hold the quiz questions, their answer choices, and the correct answer.
 
 
 
@@ -51,6 +52,9 @@ As always suggestions are welcome. I have used the methods I have at hand at the
 ## Credits
 
 - [W3 Schools: How TO - Media Queries with JavaScript](https://www.w3schools.com/howto/howto_js_media_queries.asp)
+- [Guru99: Top 100 JavaScript Interview Questions and Answers for 2022](https://www.guru99.com/javascript-interview-questions-answers.html)
+- [Stack Overflow: How to create object inside object in Javascript](https://stackoverflow.com/questions/9190322/how-to-create-object-inside-object-in-javascript)
+
 
 - Trilogy Education Services, LLC for the example
 
