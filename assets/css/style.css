@@ -28,4 +28,8 @@
 
 .button {
   font-size: 1.2em;
+  padding: 5px;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
 }

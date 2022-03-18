@@ -3,6 +3,7 @@ var scoreEl = document.querySelector("#score-text");
 var timeEl = document.querySelector("#time-text");
 var startButton = document.querySelector(".start-button");
 var continueButton = document.querySelector(".continue-button");
+var submitButton = document.querySelector(".submit-button");
 var questionText = document.querySelector(".questionText");
 var choiceText = document.querySelector(".choiceText");
 var initials = document.querySelector("#initials");
@@ -15,7 +16,7 @@ var timeRemaining;
 // variables for keeping score
 var rightAnswer = 0;
 var numQuestions = 2;
-var score = (rightAnswer/numQuestions)*100;
+var score = (rightAnswer / numQuestions) * 100;
 
 // ? var correctAnswers = ["a","c"]
 // ? var userAnswers = []
@@ -25,25 +26,25 @@ var score = (rightAnswer/numQuestions)*100;
 // Object for Quiz Question and answers. Correct answer a
 const quizQuestion = [
     {
-    // Correct answer a
-    question: "What are the JavaScript data types?", 
-    answerChoices: {
-    a: "Number, String, Boolean, Object, and Undefined", 
-    b: "Helvetica, Cambria, and Times New Roman", 
-    c: "Tall, Dark, and Handsome"
+        // Correct answer a
+        question: "What are the JavaScript data types?",
+        answerChoices: {
+            a: "Number, String, Boolean, Object, and Undefined",
+            b: "Helvetica, Cambria, and Times New Roman",
+            c: "Tall, Dark, and Handsome"
+        },
+        correct: "a"
     },
-    correct: "a"
-},
     {
-    // Correct answer c
-    question: "What does DOM stand for?", 
-    answerChoices: {
-    a: "Defined Object Method", 
-    b: "Definately Over My head", 
-    c: "Document Object Model"
-    },
-    correct: "c"
-}
+        // Correct answer c
+        question: "What does DOM stand for?",
+        answerChoices: {
+            a: "Defined Object Method",
+            b: "Definately Over My head",
+            c: "Document Object Model"
+        },
+        correct: "c"
+    }
 ];
 
 // page load events
@@ -51,49 +52,67 @@ const quizQuestion = [
 // Quiz start 
 function startQuiz() {
     timeRemaining = 10;
+    questionText.textContent = "";
     startButton.disabled = true;
     startTimer()
-  }
+}
 
 
 // loop through quiz questions look for selected answer. push user choice to array?
 
-// Quiz complete--when both questions are answered
+
+
+
 
 
 
 // timer function
 function startTimer() {
-    time = setInterval(function() {
-      timeRemaining--;
-      timeEl.textContent = timeRemaining;
-    //  need to add if questions answered with time remaining
-      if (timeRemaining === 0) {
-        clearInterval(time);
-        timeout();
-      }
+    time = setInterval(function () {
+        timeRemaining--;
+        timeEl.textContent = timeRemaining;
+        //  need to add if questions answered with time remaining
+        if (timeRemaining === 0) {
+            clearInterval(time);
+            timeout();
+        }
     }, 1000);
-  }
+}
 
 //   subtract 5s from clock for wrong answers
 
 
-  // Timeout 
+// End quiz 
+function endQuiz() {
+    questionText.textContent = "That's all there is to it.";
+    choiceText.textContent = "";
+    startButton.disabled = false;
+}
 
+// Timeout 
 function timeout() {
     questionText.textContent = "Time's Up!";
     choiceText.textContent = "";
     startButton.disabled = false;
-  }
+}
 
-// Update score (add correct answers and keep in localStorage)
-
+// Update score (% keep in localStorage)
+function setScore() {
+    scoreEl.textContent = score;
+    localStorage.setItem("userScore", score);
+}
 
 // Update initials (Initials to localStorage)
+function setInitials() {
+    initials.textContent = score;
+    localStorage.setItem("initials", initials);
+}
 
 
-// Event lister button click to start quiz
+// Event lister button click to start button
 startButton.addEventListener("click", startQuiz);
- 
 
-  
+// Event lister button click to continue button
+
+// Event lister button click to submit button
+submitButton.addEventListener("click", endQuiz);
