@@ -57,6 +57,7 @@ As always suggestions are welcome. I have used the methods I have at hand at the
 ## Credits
 
 - [Guru99: Top 100 JavaScript Interview Questions and Answers for 2022](https://www.guru99.com/javascript-interview-questions-answers.html)
+- [W3 Schools: HTML ```<input>``` type Attribute](https://www.w3schools.com/tags/att_input_type.asp)
 - [Stack Overflow: How to create object inside object in Javascript](https://stackoverflow.com/questions/9190322/how-to-create-object-inside-object-in-javascript)
 - Trilogy Education Services, LLC for the example gif
 
