@@ -37,15 +37,17 @@ The first step I took was to start pseudo-coding. I wanted to get my thought pro
 
 ### style.css
 
-1. I decided to wait to do much styling as that isn't the main focus of this exercise, so at the beginning I only added very basic styling to the CSS file.
-2. If there is time I would like to improve the styling.
+1. I decided to wait to do much styling until the end, so at the beginning I only added very basic styling to the CSS file.
+2. For readability, I added more css as I went.
+3. If there is time I would like to improve the styling.
 
 
 
 ### script.js
 
 1. I added an object to hold the quiz questions, their answer choices, and the correct answer.
-2. I made an outline in comments to help guide my process in creeating the javaScript I needed.
+2. I made an outline of comments to help guide my process in creeating the javaScript I needed.
+3. As I was filling in code in the outline I had created, I needed to add more variables.
 
 
 

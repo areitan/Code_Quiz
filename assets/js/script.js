@@ -2,7 +2,7 @@
 var scoreEl = document.querySelector("#score-text");
 var timeEl = document.querySelector("#time-text");
 var startButton = document.querySelector(".start-button");
-var continueButton = document.querySelector(".continue-button");
+// var continueButton = document.querySelector(".continue-button");
 var submitButton = document.querySelector(".submit-button");
 var questionText = document.querySelector(".questionText");
 var choiceText = document.querySelector(".choiceText");
@@ -18,9 +18,15 @@ var rightAnswer = 0;
 var numQuestions = 2;
 var score = (rightAnswer / numQuestions) * 100;
 
-// ? var correctAnswers = ["a","c"]
-// ? var userAnswers = []
+// create counter variable
 
+// create render function
+
+
+// in render function target question text and buttons. create variables for buttons inside the function
+
+
+// use question array and counter variable to get current question object and update variables (targets from render fx)
 
 
 // Object for Quiz Question and answers. Correct answer a
@@ -49,6 +55,12 @@ const quizQuestion = [
 
 // page load events
 
+
+
+
+
+
+
 // Quiz start 
 function startQuiz() {
     timeRemaining = 10;
@@ -56,14 +68,6 @@ function startQuiz() {
     startButton.disabled = true;
     startTimer()
 }
-
-
-// loop through quiz questions look for selected answer. push user choice to array?
-
-
-
-
-
 
 
 // timer function
@@ -108,11 +112,22 @@ function setInitials() {
     localStorage.setItem("initials", initials);
 }
 
+// Apend initials to screen
+
+
+
+
+
+
 
 // Event lister button click to start button
 startButton.addEventListener("click", startQuiz);
 
-// Event lister button click to continue button
+// Event lister button click to answer button
+
+
+
+
 
 // Event lister button click to submit button
 submitButton.addEventListener("click", endQuiz);
