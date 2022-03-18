@@ -1,10 +1,31 @@
 * {
     box-sizing: border-box;
-    margin: 0;
   }
 
-  body {
+  .header, body {
     font-family: Arial;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.scoreContainer {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.questionContainer {
+  padding: 20px;
+ }
+
+.textChoice li {
+  display: grid;
+  gap: 10px;
+}
+
+.button {
+  font-size: 1.2em;
 }

@@ -17,7 +17,8 @@ var rightAnswer = 0;
 var numQuestions = 2;
 var score = (rightAnswer/numQuestions)*100;
 
-
+// ? var correctAnswers = ["a","c"]
+// ? var userAnswers = []
 
 
 
@@ -47,13 +48,17 @@ const quizQuestion = [
 
 // page load events
 
-// Quiz start event
-
+// Quiz start 
+function startQuiz() {
+    timeRemaining = 10;
+    startButton.disabled = true;
+    startTimer()
+  }
 
 
 // loop through quiz questions look for selected answer. push user choice to array?
 
-// Quiz complete
+// Quiz complete--when both questions are answered
 
 
 
@@ -72,6 +77,7 @@ function startTimer() {
 
 //   subtract 5s from clock for wrong answers
 
+
   // Timeout 
 
 function timeout() {
@@ -82,9 +88,12 @@ function timeout() {
 
 // Update score (add correct answers and keep in localStorage)
 
+
 // Update initials (Initials to localStorage)
 
 
+// Event lister button click to start quiz
+startButton.addEventListener("click", startQuiz);
  
 
   

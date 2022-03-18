@@ -14,13 +14,8 @@
     <!-- Initial screen to start quiz -->
     <div class="header">
       <h1>JavaScrip Code Quiz Challenge</h1><br />
-      <ul>
-        <li>You will have 10 seconds to complete the quiz.</li>
-        <li>If you answer incorrectly, 5 seconds will be deducted from your time.</li>
-        <li>Click start to begin.</li>
-      </ul>
+      
     </div>
-    <button class="start-button">Start</button>
   </header>
 
   <main>
@@ -39,9 +34,16 @@
       <!-- Displays question -->
       <div class="questionContainer">
         <div class="questionText">******questionText******</div>
-        <ul class="choiceText">******Answer Choices******</ul>
+        <ul class="choiceText">
+          <li>You will have 10 seconds to complete the quiz.</li>
+          <li>If you answer incorrectly, 5 seconds will be deducted from your time.</li>
+          <li>Click start to begin.</li>
+        </ul>
       </div>
-      <div><button class="continue-button">Continue</button></div>
+      
+      <button class="button start-button">Start</button>
+      <button class="button continue-button">Continue</button>
+      <button class="button submit-button">Submit</button>
     </section>
 
     <section>
@@ -50,7 +52,6 @@
         <ul></ul>
       </div>
       <input type="text" id="initials" name="initials">
-      <input type="submit" value="Submit">
     </section>
 
 
