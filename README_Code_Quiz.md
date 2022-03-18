@@ -24,17 +24,21 @@ Code Quiz
 
 The first step I took was to start pseudo-coding. I wanted to get my thought process down on paper and then attempt to write the code from there.
 
+1. I used paper and pencil to draw out a flow chart showing my desired screens and the events I thought I needed to handle on and/or between them.
+
 
 
 
 ### index.html
 
-1. I added a div to hold the quiz.
-2. I added a button to submit the form.
+1. Since the HTML file is the framework for the application, I thought it was logical to start there.
+2. I played around with the layout to map out the pieces I thought I would need. 
 
 
 ### style.css
 
+1. I decided to wait to do much styling as that isn't the main focus of this exercise, so at the beginning I only added very basic styling to the CSS file.
+2. If there is time I would like to improve the styling.
 
 
 

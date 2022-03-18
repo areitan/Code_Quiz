@@ -9,28 +9,35 @@
 </head>
 
 <body>
-  <form>
-    <div class="header">
-    <h1>JavaScrip Code Quiz Challenge</h1>
-    </div>
-    <h1 class="time"></h1>
-    <div id="timer"></div>
+  <header>
+    <!-- Initial screen to start quiz -->
+    <div class="header"><h1>JavaScrip Code Quiz Challenge</h1></div>
+    <button class="start-button">Start</button>
+  </header>
   
-
-    <label id="questionText">quizQuestion[0]</label>
-
-    <ul>
-      <input type="button" id="a" name="quizQuestion.answerChoices[0]"></input>
-      <input type="button" id="b" name="quizQuestion.answerChoices[1]"></input>
-      <input type="button" id="c" name="quizQuestion.answerChoices[2]"></input>
-    </ul>
+  <main>
     
+    <section>
+      <!-- Displays score -->
+        <div class = "scoreContainer">
+        <h2>Score: <span id="score-text">0</span></h2>
     
+        <!-- Displays time -->
+        <div class= "timeContainer">
+        <div class="time-text">10</div>
+          </div>
+      </div>
     
-    <button id="submit">Submit</button>
-
-
-  </form>
+          <!-- Displays question -->
+      <div class="questionContainer">
+        <div class="questionText">******questionText******</div>
+        <ul>******Answer Choices******</ul>
+      </div>
+      <div><button id="continue-button">******Continue******</button></div>
+    </section>
+   
+    
+  </main>
 
   <script src="./assets/js/script.js"></script>
 </body>

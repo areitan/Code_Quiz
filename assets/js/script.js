@@ -21,15 +21,17 @@ const quizQuestion = [
 }
 ];
 
-document.getElementById(questionText).innerHTML = quizQuestion
-
 // variables for keeping score
 var right = 0;
 var wrong = 0;
 var numQuestions = 2;
 var score = right/numQuestions;
 
-// Clicking on submit opens next question
+// document.getElementById(questionText).innerHTML = quizQuestion
+
+
+
+// Clicking continue opens next question
 // button.addEventListener("click", function () {
 // window.location.div = quizQuestion[question];
 //   });
