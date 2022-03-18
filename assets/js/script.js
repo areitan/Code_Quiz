@@ -1,6 +1,19 @@
+// Set JS selectors
+
+// Set variables
+// variables for keeping score
+var right = 0;
+var wrong = 0;
+var numQuestions = 2;
+var score = (right/numQuestions)*100;
+
+
+
+
 // Object for Quiz Question and answers. Correct answer a
 const quizQuestion = [
     {
+    // Correct answer a
     question: "What are the JavaScript data types?", 
     answerChoices: {
     a: "Number, String, Boolean, Object, and Undefined", 
@@ -21,20 +34,24 @@ const quizQuestion = [
 }
 ];
 
-// variables for keeping score
-var right = 0;
-var wrong = 0;
-var numQuestions = 2;
-var score = right/numQuestions;
+// page load events
 
-// document.getElementById(questionText).innerHTML = quizQuestion
+// Quiz start event
+
+// loop through quiz questions
+
+// Quiz complete
+
+// Timeout 
+
+// timer function
+
+// time subtract time
+
+// Update score (add correct answers and keep in localStorage)
 
 
-
-// Clicking continue opens next question
-// button.addEventListener("click", function () {
-// window.location.div = quizQuestion[question];
-//   });
+// Update score (add wrong answers and keep in localStorage)
 
 
  

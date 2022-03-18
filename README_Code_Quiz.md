@@ -45,6 +45,7 @@ The first step I took was to start pseudo-coding. I wanted to get my thought pro
 ### script.js
 
 1. I added an object to hold the quiz questions, their answer choices, and the correct answer.
+2. I made an outline in comments to help guide my process in creeating the javaScript I needed.
 
 
 
@@ -55,12 +56,9 @@ As always suggestions are welcome. I have used the methods I have at hand at the
 
 ## Credits
 
-- [W3 Schools: How TO - Media Queries with JavaScript](https://www.w3schools.com/howto/howto_js_media_queries.asp)
 - [Guru99: Top 100 JavaScript Interview Questions and Answers for 2022](https://www.guru99.com/javascript-interview-questions-answers.html)
 - [Stack Overflow: How to create object inside object in Javascript](https://stackoverflow.com/questions/9190322/how-to-create-object-inside-object-in-javascript)
-
-
-- Trilogy Education Services, LLC for the example
+- Trilogy Education Services, LLC for the example gif
 
 
 
