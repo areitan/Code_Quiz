@@ -32,7 +32,8 @@ The first step I took was to start pseudo-coding. I wanted to get my thought pro
 ### index.html
 
 1. Since the HTML file is the framework for the application, I thought it was logical to start there.
-2. I played around with the layout to map out the pieces I thought I would need. 
+2. I played around with the layout several times to map out the pieces I thought I would need. 
+3. Ultimately, I decided to add sections for each "screen" I wanted to show.
 
 
 ### style.css
@@ -40,6 +41,7 @@ The first step I took was to start pseudo-coding. I wanted to get my thought pro
 1. I decided to wait to do much styling until the end, so at the beginning I only added very basic styling to the CSS file.
 2. For readability, I added more css as I went.
 3. If there is time I would like to improve the styling.
+4. Added class ```.hidden``` with a displayof none to work together with the javescript and hide items when I didn't want them displayed.
 
 
 
@@ -48,6 +50,7 @@ The first step I took was to start pseudo-coding. I wanted to get my thought pro
 1. I added an object to hold the quiz questions, their answer choices, and the correct answer.
 2. I made an outline of comments to help guide my process in creeating the javaScript I needed.
 3. As I was filling in code in the outline I had created, I needed to add more variables.
+4. Added class ```.hidden``` to hide elements when I didn't want them to show.
 
 
 

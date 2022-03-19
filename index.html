@@ -30,31 +30,51 @@
           <div class="time">Time: <span id="time-text">0</span></div>
         </div>
       </div>
-
-      <!-- Displays question -->
-      <div class="questionContainer">
-        <div class="questionText">******questionText******</div>
-        <ul class="choiceText">
-          <li>You will have 10 seconds to complete the quiz.</li>
-          <li>If you answer incorrectly, 5 seconds will be deducted from your time.</li>
-          <li>Click start to begin.</li>
-        </ul>
-      </div>
-
-      <button class="button start-button">Start</button>
-      <button class="button continue-button">Continue</button>
-      <button class="button submit-button">Submit</button>
     </section>
 
     <section>
-      <div>
-        <p>Scores:</p>
-        <ul></ul>
+      <!-- Displays question -->
+      <div class="startContainer">
+        <div class="startText">
+          <ol class="startList">
+            <li>You will have 10 seconds to complete the quiz.</li>
+            <li>If you answer incorrectly, 5 seconds will be deducted from your time.</li>
+            <li>Click start to begin.</li>
+          </ol>
+          <button class="button start-button">Start</button>
+        </div>
       </div>
-      <input type="text" id="initials" name="initials">
     </section>
 
+    <section>
+      <!-- Displays question -->
+      <div class="questionContainer">
+        <div class="questionText">What are the JavaScript data types?</div>
+        <button class="button a-button">Number, String, Boolean, Object, and Undefined</button>
+        <button class="button b-button">Helvetica, Cambria, and Times New Roman</button>
+        <button class="button c-button">Tall, Dark, and Handsome</button>
+      </div>
+    </section>
 
+    <section>
+      <!-- Displays question -->
+      <div class="questionContainer2">
+        <div class="questionText2">What does DOM stand for?</div>
+        <button class="button a2-button">Defined Object Method</button>
+        <button class="button b2-button">Definately Over My head</button>
+        <button class="button c2-button">Document Object Model</button>
+      </div>
+    </section>
+
+    <section>
+      <div class="initialsContainer">
+        <p>Scores:</p>
+        <ul></ul>
+
+        <input type="text" id="initials" name="initials">
+        <button class="button submit-button">Submit</button>
+      </div>
+    </section>
 
   </main>
 

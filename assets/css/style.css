@@ -11,19 +11,25 @@
     margin: 0;
 }
 
-.scoreContainer {
+.scoreContainer, .questionContainer, .questionContainer2 {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   text-align: center;
   font-size: 1.5em;
 }
 
-.questionContainer {
+ .initialsContainer {
+  display: flex;
   padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
  }
 
-.textChoice li {
+.startText li {
   display: grid;
   gap: 10px;
+  list-style-type: circle;
 }
 
 .button {
@@ -32,4 +38,8 @@
   text-align: center;
   justify-content: center;
   align-content: center;
+}
+
+.hidden {
+  display: none;
 }
