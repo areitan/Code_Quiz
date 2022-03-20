@@ -10,7 +10,7 @@ var cButton = document.querySelector(".c-button");
 var a2Button = document.querySelector(".a2-button");
 var b2Button = document.querySelector(".b2-button");
 var c2Button = document.querySelector(".c2-button");
-var submitButton = document.querySelector(".submit-button");
+var submitButton = document.querySelector("#submitButton");
 var questionText = document.querySelector(".questionText");
 var startText = document.querySelector(".startText");
 var startList = document.querySelector(".startList");
@@ -18,6 +18,8 @@ var choiceText = document.querySelector(".choiceText");
 var initialsContainer = document.querySelector(".initialsContainer");
 var questionContainer = document.querySelector(".questionContainer");
 var questionContainer2 = document.querySelector(".questionContainer2");
+var initialsInput = document.querySelector("#initials");
+var savedUser = document.querySelector("#savedUser");
 
 
 // variables for timer
@@ -119,13 +121,37 @@ a2Button.addEventListener("click", endQuiz);
 b2Button.addEventListener("click", endQuiz);
 c2Button.addEventListener("click", endQuiz);
 
-
-
 // Reduce time for incorret answers
 
 // Update initials (Initials to localStorage) 
+// function saveUserInfo() {
+//        // User Info
+//      var userInfo = {
+//       userInitials: initialsInput.value.trim(),
+//       userScore: score.value,
+//     };
+  
+    // local storage 
+//     localStorage.setItem("userInfo", JSON.stringify(userInfo));
+//   }
 
-// Apend  Initials and Score to Initials ul
+// Add  Initials and Score to Initials
+// function renderUserInfo() {
+//     var userDisplay = JSON.parse(localStorage.getItem("userInfo"));
+//     if (userDisplay !== null) {
+//     document.getElementById("savedUser").textContent = userInfo.userInitials;
+//     document.getElementById("savedScore").textContent = userInfo.userScore;
+//        } else {
+//       return;
+//     }
+//   }
+  
+  // Event listener button click to submit button
+//   submitButton.addEventListener("click", function(event) {
+//   event.preventDefault();
+//   saveUserInfo();
+//   renderUserInfo();
+//   });
 
-// Event listener button click to submit button
+
 
