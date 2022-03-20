@@ -1,8 +1,10 @@
 // Set JS selectors
-var scoreEl = document.querySelector("#score-text");
+var scoreEl = document.querySelector("#scoreText");
 var timeEl = document.querySelector("#time-text");
 var startButton = document.querySelector(".start-button");
 var aButton = document.querySelector(".a-button");
+var q1correctButton = document.querySelector("#q1correct");
+var q2correctButton = document.querySelector("#q2correct");
 var bButton = document.querySelector(".b-button");
 var cButton = document.querySelector(".c-button");
 var a2Button = document.querySelector(".a2-button");
@@ -23,32 +25,25 @@ var time;
 var timeRemaining;
 
 // variables for keeping score
-var rightAnswer = 0;
-var numQuestions = 2;
-var score = (rightAnswer / numQuestions) * 100;
-
-// question counter variable
-// create render function
-// render function target question text and buttons. create variables for buttons inside the function
+var score = 0;
 
 // page load events
-
 function init() {
     questionContainer.classList.add("hidden");
     questionContainer2.classList.add("hidden");
     initialsContainer.classList.add("hidden");
 }
 
-// Quiz start 
+// Quiz start and Q1
 function startQuiz() {
     startTimer()
-    timeRemaining = 10;
+    timeRemaining = 5;
     startList.classList.add("hidden");
     startButton.classList.add("hidden");
     questionContainer.classList.remove("hidden");
 }
 
-// Quiz start 
+// Display Q2 
 function quesstion2() {
     questionContainer.classList.add("hidden");
     questionContainer2.classList.remove("hidden");
@@ -67,44 +62,46 @@ function startTimer() {
     }, 1000);
 }
 
-//   subtract 5s from clock for wrong answers
-
-
-// End quiz 
-function endQuiz() {
-    startText.textContent = "That's all there is to it.";
-    startList.classList.add("hidden");
-    startButton.classList.remove("hidden");
-    questionContainer2.classList.add("hidden");
-    initialsContainer.classList.remove("hidden");
-}
-
 // Timeout 
 function timeout() {
-    startText.textContent = "Time's Up!";
+    startText.textContent = "";
     startList.classList.add("hidden");
     startButton.classList.remove("hidden");
     questionContainer.classList.add("hidden");
     questionContainer2.classList.add("hidden");
 }
 
-// Update score (% keep in localStorage)
+// End quiz 
+function endQuiz() {
+    startText.textContent = "";
+    startList.classList.add("hidden");
+    startButton.classList.remove("hidden");
+    questionContainer2.classList.add("hidden");
+    initialsContainer.classList.remove("hidden");
+}
+
+// Update score (keep in localStorage)
 function setScore() {
     scoreEl.textContent = score;
     localStorage.setItem("userScore", score);
 }
 
-// Update initials (Initials to localStorage)
-function setInitials() {
-    initials.textContent = score;
-    localStorage.setItem("initials", initials);
-}
-
+// get value from first correct answer button
 // add 1 to score
+function setScoreText() {
+    scoreText.textContent = score;
+}
+// Attach event listener to 1st correct answer button 
+q1correctButton.addEventListener("click", function() {
+  score++;
+  setScoreText();
+});
 
-
-// Apend initials to screen
-
+// // Attach event listener to 2nd correct answr button 
+q2correctButton.addEventListener("click", function() {
+    score++;
+    setScoreText();
+  });
 
 //  Calls init function
 init();
@@ -122,5 +119,13 @@ a2Button.addEventListener("click", endQuiz);
 b2Button.addEventListener("click", endQuiz);
 c2Button.addEventListener("click", endQuiz);
 
-// Event lister button click to submit button
+
+
+// Reduce time for incorret answers
+
+// Update initials (Initials to localStorage) 
+
+// Apend  Initials and Score to Initials ul
+
+// Event listener button click to submit button
 

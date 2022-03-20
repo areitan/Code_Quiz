@@ -23,7 +23,7 @@
     <section>
       <!-- Displays score -->
       <div class="scoreContainer">
-        <div>Score: <span id="score-text">0</span>%</div>
+        <div>Score: <span id="scoreText">0</span> out of 2</div>
 
         <!-- Displays time -->
         <div class="timeContainer">
@@ -36,12 +36,10 @@
       <!-- Displays question -->
       <div class="startContainer">
         <div class="startText">
-          <ol class="startList">
-            <li>You will have 10 seconds to complete the quiz.</li>
-            <li>If you answer incorrectly, 5 seconds will be deducted from your time.</li>
-            <li>Click start to begin.</li>
-          </ol>
-          <button class="button start-button">Start</button>
+          <div class="startList">
+            <p>You will have 5 seconds to complete the quiz.</p>
+          <button class="button start-button">Click here to begin</button>
+        </div>
         </div>
       </div>
     </section>
@@ -50,7 +48,7 @@
       <!-- Displays question -->
       <div class="questionContainer">
         <div class="questionText">What are the JavaScript data types?</div>
-        <button class="button a-button">Number, String, Boolean, Object, and Undefined</button>
+        <button class="button a-button" id="q1correct">Number, String, Boolean, Object, and Undefined</button>
         <button class="button b-button">Helvetica, Cambria, and Times New Roman</button>
         <button class="button c-button">Tall, Dark, and Handsome</button>
       </div>
@@ -62,15 +60,13 @@
         <div class="questionText2">What does DOM stand for?</div>
         <button class="button a2-button">Defined Object Method</button>
         <button class="button b2-button">Definately Over My head</button>
-        <button class="button c2-button">Document Object Model</button>
+        <button class="button c2-button" id="q2correct">Document Object Model</button>
       </div>
     </section>
 
     <section>
       <div class="initialsContainer">
-        <p>Scores:</p>
-        <ul></ul>
-
+        <p>Initials:</p>
         <input type="text" id="initials" name="initials">
         <button class="button submit-button">Submit</button>
       </div>
