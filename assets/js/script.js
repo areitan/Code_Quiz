@@ -107,9 +107,7 @@ q2correctButton.addEventListener("click", function () {
 
 
 //  Calls init function
-init(); {
-    lastUser();
-}
+init(); 
 
 // Event lister button click to start button
 startButton.addEventListener("click", startQuiz);
@@ -154,7 +152,7 @@ function lastUser() {
 
 // event listener on submit button
 submitButton.addEventListener("click", function (event) {
-    event.preventDefault();
+    // event.preventDefault();
     saveUser();
     lastUser();
 });
