@@ -34,7 +34,6 @@ Code Quiz
 2. I played around with several different layouts to map out the pieces I thought I would need.
 3. Ultimately, I decided to add sections for each "screen" I wanted to show.
 4. I added id's and event listeners to allow me to access the correct answer buttons in order to use them for scoring.
-5. I added ```<ul>``` tags to hold the initials and score entered by the user.
 
 
 ### style.css
@@ -50,7 +49,7 @@ Code Quiz
 2. I added a class ```.hidden``` and added it or removed it for elements to control when they would display or they would be hidden.
 3. I used event listeners and functions to keep score and control the flow of questions.
 4. This document is incomplete. I ran out of time and was unable to finish all of the functionality.
-5. I added an event listener and functions to allow the user to submit their initials and score 
+5. I added an event listener and functions to allow the user to submit their initials and score and have it saves at the bottom of the page.
 6. I added a function to reduce the time interval for incorrect answers.
 
 

@@ -133,7 +133,6 @@ c2Button.addEventListener("click", endQuiz);
 // local storage variables
 var initialsInput = document.querySelector("#initials");
 var savedUser = document.querySelector("#savedUser");
-var savedUser = document.querySelector("#savedUser");
 
 // save user info
 function saveUser() {

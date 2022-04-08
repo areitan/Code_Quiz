@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    background-color: rgb(21, 20, 71);
+    color: aliceblue;
   }
 
   .header, body {
@@ -30,6 +32,7 @@
   text-align: center;
   justify-content: center;
   align-content: center;
+  background-color: rgb(30, 160, 211);
 }
 
 .startList ul li {
@@ -48,6 +51,8 @@
 
 #initials {
   font-size: 1.5em;
+  background-color: aliceblue;
+  color: blue;
 }
 
 .hidden {
