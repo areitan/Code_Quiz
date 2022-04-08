@@ -37,7 +37,8 @@
       <div class="startContainer">
         <div class="startText">
           <div class="startList">
-            <p>You will have 5 seconds to complete the quiz.</p>
+            <ul><li>You will have 10 seconds to complete the quiz.</li>
+            <li>For each wrong answer 2 seconds will be deducted from your time.</li></ul>
             <button class="button start-button">Click here to begin</button>
           </div>
         </div>
@@ -64,13 +65,15 @@
       </div>
     </section>
 
+    <!-- Displays initials and score -->
     <section>
       <div class="initialsContainer">
         <p>Initials:</p>
         <input type="text" id="initials" name="initials">
         <button class="button submit-button" id="submitButton">Submit</button>
-        <div id="savedUser"></div>
-        <div id="savedScore"></div>
+        <div>
+          <p>Initials: <span id="savedUser"></span> (<span id="savedScore"></span> of 2 correct!)</p>
+        </div>
       </div>
     </section>
 

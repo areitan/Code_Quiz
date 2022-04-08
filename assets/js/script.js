@@ -18,8 +18,7 @@ var choiceText = document.querySelector(".choiceText");
 var initialsContainer = document.querySelector(".initialsContainer");
 var questionContainer = document.querySelector(".questionContainer");
 var questionContainer2 = document.querySelector(".questionContainer2");
-var initialsInput = document.querySelector("#initials");
-var savedUser = document.querySelector("#savedUser");
+
 
 
 // variables for timer
@@ -39,7 +38,7 @@ function init() {
 // Quiz start and Q1
 function startQuiz() {
     startTimer()
-    timeRemaining = 5;
+    timeRemaining = 10;
     startList.classList.add("hidden");
     startButton.classList.add("hidden");
     questionContainer.classList.remove("hidden");
@@ -49,7 +48,7 @@ function startQuiz() {
 function quesstion2() {
     questionContainer.classList.add("hidden");
     questionContainer2.classList.remove("hidden");
-   }
+}
 
 
 // timer function
@@ -59,18 +58,9 @@ function startTimer() {
         timeEl.textContent = timeRemaining;
         if (timeRemaining === 0) {
             clearInterval(time);
-            timeout();
+            endQuiz();
         }
     }, 1000);
-}
-
-// Timeout 
-function timeout() {
-    startText.textContent = "";
-    startList.classList.add("hidden");
-    startButton.classList.remove("hidden");
-    questionContainer.classList.add("hidden");
-    questionContainer2.classList.add("hidden");
 }
 
 // End quiz 
@@ -78,14 +68,18 @@ function endQuiz() {
     startText.textContent = "";
     startList.classList.add("hidden");
     startButton.classList.remove("hidden");
+    questionContainer.classList.add("hidden");
     questionContainer2.classList.add("hidden");
     initialsContainer.classList.remove("hidden");
+        if (timeRemaining >= 0) {
+        clearInterval(time);
+        timeEl.textContent = "0";
+    }
 }
 
-// Update score (keep in localStorage)
+// Update score
 function setScore() {
     scoreEl.textContent = score;
-    localStorage.setItem("userScore", score);
 }
 
 // get value from first correct answer button
@@ -93,65 +87,80 @@ function setScore() {
 function setScoreText() {
     scoreText.textContent = score;
 }
+
+// Reduce time for incorret answers
+function subtractTime() {
+    timeRemaining = timeRemaining - 2;
+
+}
+
 // Attach event listener to 1st correct answer button 
-q1correctButton.addEventListener("click", function() {
-  score++;
-  setScoreText();
+q1correctButton.addEventListener("click", function () {
+    score++;
+    setScoreText();
 });
 
 // // Attach event listener to 2nd correct answr button 
-q2correctButton.addEventListener("click", function() {
+q2correctButton.addEventListener("click", function () {
     score++;
     setScoreText();
-  });
+});
+
 
 //  Calls init function
-init();
+init(); {
+    lastUser();
+}
 
 // Event lister button click to start button
 startButton.addEventListener("click", startQuiz);
 
 // Event lister button click to question 1 answer buttons
 aButton.addEventListener("click", quesstion2);
+bButton.addEventListener("click", subtractTime);
 bButton.addEventListener("click", quesstion2);
+cButton.addEventListener("click", subtractTime);
 cButton.addEventListener("click", quesstion2);
 
 // Event lister button click to question 2 answer buttons
+a2Button.addEventListener("click", subtractTime);
 a2Button.addEventListener("click", endQuiz);
+b2Button.addEventListener("click", subtractTime);
 b2Button.addEventListener("click", endQuiz);
 c2Button.addEventListener("click", endQuiz);
 
-// Reduce time for incorret answers
 
-// Update initials (Initials to localStorage) 
-// function saveUserInfo() {
-//        // User Info
-//      var userInfo = {
-//       userInitials: initialsInput.value.trim(),
-//       userScore: score.value,
-//     };
-  
-    // local storage 
-//     localStorage.setItem("userInfo", JSON.stringify(userInfo));
-//   }
+// local storage variables
+var initialsInput = document.querySelector("#initials");
+var savedUser = document.querySelector("#savedUser");
+var savedUser = document.querySelector("#savedUser");
 
-// Add  Initials and Score to Initials
-// function renderUserInfo() {
-//     var userDisplay = JSON.parse(localStorage.getItem("userInfo"));
-//     if (userDisplay !== null) {
-//     document.getElementById("savedUser").textContent = userInfo.userInitials;
-//     document.getElementById("savedScore").textContent = userInfo.userScore;
-//        } else {
-//       return;
-//     }
-//   }
-  
-  // Event listener button click to submit button
-//   submitButton.addEventListener("click", function(event) {
-//   event.preventDefault();
-//   saveUserInfo();
-//   renderUserInfo();
-//   });
+// save user info
+function saveUser() {
+    // Save user data as an object
+    var user = {
+        userInitials: initials.value.trim(),
+        userScore: score,
+    };
+    // Store user object in local storage and convert to string
+    localStorage.setItem("user", JSON.stringify(user));
+}
 
+function lastUser() {
+    // Use JSON.parse() to create object
+    var lastUser = JSON.parse(localStorage.getItem("user"));
 
+    if (initialsInput !== null) {
+        document.getElementById("savedUser").textContent = lastUser.userInitials;
+        document.getElementById("savedScore").textContent = lastUser.userScore;
+    } else {
+        return;
+    }
+}
+
+submitButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    saveUser();
+    lastUser();
+});
 

@@ -19,8 +19,9 @@
   font-size: 1.5em;
 }
 
-.startText {
+.startList {
   justify-content: center;
+  
 }
 
 .button {
@@ -29,6 +30,20 @@
   text-align: center;
   justify-content: center;
   align-content: center;
+}
+
+.startList ul li {
+  list-style: none;
+  
+}
+
+.questionText, .questionText2 {
+  font-size: 1.5em;
+  margin: 1.5em;
+}
+
+.initialsContainer p {
+  font-size: 1.5em;
 }
 
 #initials {
