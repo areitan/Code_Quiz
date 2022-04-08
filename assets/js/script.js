@@ -20,7 +20,6 @@ var questionContainer = document.querySelector(".questionContainer");
 var questionContainer2 = document.querySelector(".questionContainer2");
 
 
-
 // variables for timer
 var time;
 var timeRemaining;
@@ -71,7 +70,7 @@ function endQuiz() {
     questionContainer.classList.add("hidden");
     questionContainer2.classList.add("hidden");
     initialsContainer.classList.remove("hidden");
-        if (timeRemaining >= 0) {
+    if (timeRemaining >= 0) {
         clearInterval(time);
         timeEl.textContent = "0";
     }
@@ -118,15 +117,11 @@ startButton.addEventListener("click", startQuiz);
 // Event lister button click to question 1 answer buttons
 aButton.addEventListener("click", quesstion2);
 bButton.addEventListener("click", subtractTime);
-bButton.addEventListener("click", quesstion2);
 cButton.addEventListener("click", subtractTime);
-cButton.addEventListener("click", quesstion2);
 
 // Event lister button click to question 2 answer buttons
 a2Button.addEventListener("click", subtractTime);
-a2Button.addEventListener("click", endQuiz);
 b2Button.addEventListener("click", subtractTime);
-b2Button.addEventListener("click", endQuiz);
 c2Button.addEventListener("click", endQuiz);
 
 
@@ -157,6 +152,7 @@ function lastUser() {
     }
 }
 
+// event listener on submit button
 submitButton.addEventListener("click", function (event) {
     event.preventDefault();
     saveUser();
