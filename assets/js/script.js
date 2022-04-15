@@ -150,11 +150,8 @@ function lastUser() {
 
 // event listener on submit button
 submitButton.addEventListener("click", function (event) {
-    // event.preventDefault();
     saveUser();
     lastUser();
-    // Clear initials input
-    document.getElementById("initials").textContent = "";
 });
 
 //  Calls init function

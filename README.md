@@ -11,13 +11,17 @@ NOTE: Due to time constraints, I was not able to finish all of the coding for th
 - [Code Quiz Deployed Application](https://areitan.github.io/Code_Quiz/)
 
 
-Example
+# Example
 
 ![Code Quiz Example](/assets/images/04-web-apis-homework-demo.gif)
 
-Code Quiz
+#Code Quiz
 
-![Code Quiz Screenshot](/assets/images/code_quiz_screenshot.png)
+![Code Quiz Screenshot: Starting the Quiz](/assets/images/code_quiz_screenshot.png)
+
+![Code Quiz Screenshot: The Quiz](/assets/images/code_quiz_screenshot2.png)
+
+![Code Quiz Screenshot: Finishing the Quiz](/assets/images/code_quiz_screenshot3.png)
 
 
 ## Process
@@ -51,6 +55,7 @@ Code Quiz
 4. This document is incomplete. I ran out of time and was unable to finish all of the functionality.
 5. I added an event listener and functions to allow the user to submit their initials and score and have it saves at the bottom of the page.
 6. I added a function to reduce the time interval for incorrect answers.
+7. I used local storage to show the last save user and their score on the end screen of the quiz.
 
 
 ## How To Contribute
