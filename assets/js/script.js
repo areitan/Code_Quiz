@@ -19,7 +19,6 @@ var initialsContainer = document.querySelector(".initialsContainer");
 var questionContainer = document.querySelector(".questionContainer");
 var questionContainer2 = document.querySelector(".questionContainer2");
 
-
 // variables for timer
 var time;
 var timeRemaining;
@@ -32,6 +31,8 @@ function init() {
     questionContainer.classList.add("hidden");
     questionContainer2.classList.add("hidden");
     initialsContainer.classList.add("hidden");
+    document.getElementById("initials").textContent = "";
+    lastUser();
 }
 
 // Quiz start and Q1
@@ -48,7 +49,6 @@ function quesstion2() {
     questionContainer.classList.add("hidden");
     questionContainer2.classList.remove("hidden");
 }
-
 
 // timer function
 function startTimer() {
@@ -89,8 +89,11 @@ function setScoreText() {
 
 // Reduce time for incorret answers
 function subtractTime() {
-    timeRemaining = timeRemaining - 2;
-
+     timeRemaining = timeRemaining - 2;
+    if (timeRemaining <= 2) {clearInterval(time);
+        timeEl.textContent = "0";
+        endQuiz();
+}
 }
 
 // Attach event listener to 1st correct answer button 
@@ -105,10 +108,6 @@ q2correctButton.addEventListener("click", function () {
     setScoreText();
 });
 
-
-//  Calls init function
-init(); 
-
 // Event lister button click to start button
 startButton.addEventListener("click", startQuiz);
 
@@ -121,7 +120,6 @@ cButton.addEventListener("click", subtractTime);
 a2Button.addEventListener("click", subtractTime);
 b2Button.addEventListener("click", subtractTime);
 c2Button.addEventListener("click", endQuiz);
-
 
 // local storage variables
 var initialsInput = document.querySelector("#initials");
@@ -155,5 +153,9 @@ submitButton.addEventListener("click", function (event) {
     // event.preventDefault();
     saveUser();
     lastUser();
+    // Clear initials input
+    document.getElementById("initials").textContent = "";
 });
 
+//  Calls init function
+init();

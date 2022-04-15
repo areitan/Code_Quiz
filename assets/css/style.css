@@ -1,19 +1,24 @@
 * {
-    box-sizing: border-box;
-    background-color: rgb(21, 20, 71);
-    color: aliceblue;
-  }
-
-  .header, body {
-    font-family: Arial;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(21, 20, 71);
+  color: aliceblue;
 }
 
-.scoreContainer, .startContainer, .questionContainer, .questionContainer2, .initialsContainer {
+.header,
+body {
+  font-family: Arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.scoreContainer,
+.startContainer,
+.questionContainer,
+.questionContainer2,
+.initialsContainer {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -21,9 +26,10 @@
   font-size: 1.5em;
 }
 
+
 .startList {
   justify-content: center;
-  
+
 }
 
 .button {
@@ -37,10 +43,11 @@
 
 .startList ul li {
   list-style: none;
-  
+
 }
 
-.questionText, .questionText2 {
+.questionText,
+.questionText2 {
   font-size: 1.5em;
   margin: 1.5em;
 }
