@@ -25,11 +25,14 @@ Given only an example of a code quiz and desired functionality, the goal was to 
 ## Quiz question 1
 ![Code Quiz question 1 Screenshot](/assets/images/code_quiz_screenshot2.png)
 
+## Quiz question 2
+![Code Quiz question 2 Screenshot](/assets/images/code_quiz_screenshot3.png)
+
 ## Finishing the Quiz
-![Code Quiz Finishing the Quiz Screenshot](/assets/images/code_quiz_screenshot3.png)
+![Code Quiz Finishing the Quiz Screenshot](/assets/images/code_quiz_screenshot4.png)
 
 ## Finishing the Quiz Local Storage
-![Code Local Storage Screenshot](/assets/images/code_quiz_screenshot4.png)
+![Code Local Storage Screenshot](/assets/images/code_quiz_screenshot5.png)
 
 
 ## Process And Technology Used
