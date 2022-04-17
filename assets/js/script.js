@@ -147,8 +147,8 @@ function renderLastUser() {
     if (initialsInput !== null) {
         scoreList.innerHTML = ""
         for (var i = 0; i < lastUser.length; i++) {
-            var scoreEl = document.createElement("p")
-            scoreEl.textContent = lastUser[i].userInitials + " " + lastUser[i].userScore + " of 2 correct!"
+            var scoreEl = document.createElement("li")
+            scoreEl.textContent = lastUser[i].userInitials + " scored " + lastUser[i].userScore + " of 2 correct!"
             scoreList.appendChild(scoreEl)
         }
     } else {

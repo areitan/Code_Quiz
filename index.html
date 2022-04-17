@@ -14,7 +14,6 @@
     <!-- Initial screen to start quiz -->
     <div class="header">
       <h1>JavaScrip Code Quiz Challenge</h1><br />
-
     </div>
   </header>
 
@@ -24,7 +23,6 @@
       <!-- Displays score -->
       <div class="scoreContainer">
         <div>Score: <span id="scoreText">0</span> out of 2</div>
-
         <!-- Displays time -->
         <div class="timeContainer">
           <div class="time">Time: <span id="time-text">0</span></div>
@@ -70,15 +68,22 @@
     <!-- Initials Input and submit -->
     <section>
       <div class="initialsContainer">
-        <p>Enter your initials, then click "Submit" to save your score:</p>
+        <ul>
+          <li>Enter your initials below</li>
+          <li>Then click "Submit" to save your score:</li>
+        </ul>
         <input type="text" id="initials" name="initials">
         <button class="button submit-button" id="submitButton">Submit</button>
-    <!-- Displays saved initials and score -->
-    <div class="refresh">
-          <p>Refresh the page to try again.</p>
+        <!-- Displays saved initials and score -->
+        <div class="refresh">
+          <ul>
+            <li>Refresh the page to try again.</li>
+            <br />
+            <li>Saved User Scores:</li>
+          </ul>
         </div>
-        <p>Saved User Scores:</p>
-        <div id="scoreList">
+        <div>
+          <ul id="scoreList">
         </div>
       </div>
     </section>
