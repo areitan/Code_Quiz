@@ -4,7 +4,7 @@
 ## Description
 ---
 
-Given only an example of a code quiz and desired functionality, the goal was to produce a style.css, index.html, and script.js file that work together to produce the desired quiz.
+Given only an example of a code quiz and desired functionality, the goal was to produce a style.css, index.html, and script.js file that work together to produce the desired quiz. When the page loads you are presented with the rules of the quiz along with a button to that starts the timer and displayes the first question. Once the first question is answered correctly, question 2 displays as long as there is still time left on the timer. The time remaining is reduced by 2 seconds every time a questions is answered incorrectly until time is up. When time is up or both questions are answered correctly, the user is prompted to enter their initials to store and display their initials and score.
 
 
 - [Git Hub Repository](https://github.com/areitan/Code_Quiz)
@@ -19,11 +19,17 @@ Given only an example of a code quiz and desired functionality, the goal was to 
 # Code Quiz
 ---
 
-![Code Quiz Screenshot: Starting the Quiz](/assets/images/code_quiz_screenshot.png)
+## Starting the Quiz
+![Code Starting the Quiz Screenshot](/assets/images/code_quiz_screenshot.png)
 
-![Code Quiz Screenshot: The Quiz](/assets/images/code_quiz_screenshot2.png)
+## Quiz question 1
+![Code Quiz question 1 Screenshot](/assets/images/code_quiz_screenshot2.png)
 
-![Code Quiz Screenshot: Finishing the Quiz](/assets/images/code_quiz_screenshot3.png)
+## Finishing the Quiz
+![Code Quiz Finishing the Quiz Screenshot](/assets/images/code_quiz_screenshot3.png)
+
+## Finishing the Quiz Local Storage
+![Code Local Storage Screenshot](/assets/images/code_quiz_screenshot4.png)
 
 
 ## Process And Technology Used
@@ -62,7 +68,7 @@ Given only an example of a code quiz and desired functionality, the goal was to 
 5. I added an event listener and functions to allow the user to submit their initials and score and have it saves at the bottom of the page.
 6. I added id's and event listeners to allow me to access the correct answer buttons in order to use them for scoring and subtracting time.
 7. I added a function to reduce the time interval for incorrect answers.
-8. I used local storage to show the last save user and their score on the end screen of the quiz.
+8. I used local storage and a function to create a list of saved users and their scores on the last screen of the quiz.
 
 
 ## How To Contribute
@@ -101,6 +107,7 @@ SOFTWARE.
 
 - [Guru99: Top 100 JavaScript Interview Questions and Answers for 2022](https://www.guru99.com/javascript-interview-questions-answers.html)
 - [W3 Schools: HTML ```<input>``` type Attribute](https://www.w3schools.com/tags/att_input_type.asp)
+- [MDN Web Docs: border-radius](https://www.w3schools.com/tags/att_input_type.asp)
 - Trilogy Education Services, LLC for the example gif and sample code throughout the week 4 activities.
 
 
