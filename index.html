@@ -67,17 +67,18 @@
       </div>
     </section>
 
-    <!-- Displays initials and score -->
+    <!-- Initials Input and submit -->
     <section>
       <div class="initialsContainer">
-        <p>Enter your initials:</p>
+        <p>Enter your initials, then click "Submit" to save your score:</p>
         <input type="text" id="initials" name="initials">
         <button class="button submit-button" id="submitButton">Submit</button>
-        <div>
-          <p>Last score: <span id="savedUser"></span> (<span id="savedScore"></span> of 2 correct!)</p>
-        </div>
-        <div class="refresh">
+    <!-- Displays saved initials and score -->
+    <div class="refresh">
           <p>Refresh the page to try again.</p>
+        </div>
+        <p>Saved User Scores:</p>
+        <div id="scoreList">
         </div>
       </div>
     </section>

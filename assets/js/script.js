@@ -32,7 +32,7 @@ function init() {
     questionContainer2.classList.add("hidden");
     initialsContainer.classList.add("hidden");
     document.getElementById("initials").textContent = "";
-    lastUser();
+    renderLastUser();
 }
 
 // Quiz start and Q1
@@ -89,11 +89,12 @@ function setScoreText() {
 
 // Reduce time for incorret answers
 function subtractTime() {
-     timeRemaining = timeRemaining - 2;
-    if (timeRemaining <= 2) {clearInterval(time);
+    timeRemaining = timeRemaining - 2;
+    if (timeRemaining <= 2) {
+        clearInterval(time);
         timeEl.textContent = "0";
         endQuiz();
-}
+    }
 }
 
 // Attach event listener to 1st correct answer button 
@@ -121,9 +122,12 @@ a2Button.addEventListener("click", subtractTime);
 b2Button.addEventListener("click", subtractTime);
 c2Button.addEventListener("click", endQuiz);
 
+var lastUser = JSON.parse(localStorage.getItem("user")) || [];
+
 // local storage variables
 var initialsInput = document.querySelector("#initials");
 var savedUser = document.querySelector("#savedUser");
+var scoreList = document.querySelector("#scoreList");
 
 // save user info
 function saveUser() {
@@ -132,17 +136,21 @@ function saveUser() {
         userInitials: initials.value.trim(),
         userScore: score,
     };
+
+    lastUser.push(user)
     // Store user object in local storage and convert to string
-    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("user", JSON.stringify(lastUser));
 }
 
-function lastUser() {
+function renderLastUser() {
     // Use JSON.parse() to create object
-    var lastUser = JSON.parse(localStorage.getItem("user"));
-
     if (initialsInput !== null) {
-        document.getElementById("savedUser").textContent = lastUser.userInitials;
-        document.getElementById("savedScore").textContent = lastUser.userScore;
+        scoreList.innerHTML = ""
+        for (var i = 0; i < lastUser.length; i++) {
+            var scoreEl = document.createElement("p")
+            scoreEl.textContent = lastUser[i].userInitials + " " + lastUser[i].userScore + " of 2 correct!"
+            scoreList.appendChild(scoreEl)
+        }
     } else {
         return;
     }
@@ -151,7 +159,7 @@ function lastUser() {
 // event listener on submit button
 submitButton.addEventListener("click", function (event) {
     saveUser();
-    lastUser();
+    renderLastUser();
 });
 
 //  Calls init function
